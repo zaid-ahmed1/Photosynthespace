@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 847113819827172538}
   - component: {fileID: 3066302663269064373}
   m_Layer: 0
-  m_Name: Shopping UI
+  m_Name: Plant UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
