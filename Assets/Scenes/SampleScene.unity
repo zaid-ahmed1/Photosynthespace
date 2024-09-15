@@ -10763,9 +10763,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4296173541365416778, guid: 4dac2f478aad39746bf9bea10da84b58, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1005707239}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dac2f478aad39746bf9bea10da84b58, type: 3}
+--- !u!4 &945873347 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4296173541365416778, guid: 4dac2f478aad39746bf9bea10da84b58, type: 3}
+  m_PrefabInstance: {fileID: 945873346}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &954141341
 GameObject:
   m_ObjectHideFlags: 0
@@ -11400,7 +11408,7 @@ GameObject:
   - component: {fileID: 1005707237}
   - component: {fileID: 1005707236}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: WhisperCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11464,7 +11472,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -11476,20 +11484,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005707235}
-  m_LocalRotation: {x: 0.057890374, y: -0.2508332, z: -0.020401675, w: -0.9660824}
-  m_LocalPosition: {x: 0, y: 0, z: 0.839}
-  m_LocalScale: {x: 0.0037067, y: 0.0037067, z: 0.0037067}
+  m_LocalRotation: {x: -0.0022377744, y: -0.21400742, z: -0.026326228, w: -0.97647464}
+  m_LocalPosition: {x: 0, y: 0, z: -0.2577291}
+  m_LocalScale: {x: 0.0037067002, y: 0.0037067, z: 0.0037067}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1950681478}
   - {fileID: 954141342}
   - {fileID: 106134143}
   - {fileID: 1349953242}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 945873347}
   m_LocalEulerAnglesHint: {x: -7.013, y: 29.073, z: 0.599}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.406, y: 2.647}
+  m_AnchoredPosition: {x: 1.4873397, y: 0.44538665}
   m_SizeDelta: {x: 643.3242, y: 746.12463}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1006883202
@@ -24394,4 +24402,3 @@ SceneRoots:
   - {fileID: 945873346}
   - {fileID: 591472533}
   - {fileID: 768708409}
-  - {fileID: 1005707239}
