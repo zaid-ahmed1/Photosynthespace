@@ -8,7 +8,14 @@ public class SelectFlower : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
-        // Access the transform component of this object and make it twice as large
-        transform.localScale *= 2;
+        if (other.CompareTag("Spray"))
+        {
+            transform.localScale *= 2;
+        }
+
+        if (other.CompareTag("Water"))
+        {
+            transform.localScale /= 2;
+        }
     }
 }
