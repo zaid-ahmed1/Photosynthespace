@@ -15,9 +15,9 @@ const Landing = () => {
   });
 
   const images = [
-    <img src={sprout} className="w-48 h-48" />,
-    <img src={plant} className="w-64 h-64 translate-x-8" />,
-    <img src={treeish} className="w-80 h-80 translate-x-12" />,
+    <img src={sprout} className="w-32 h-32" />,
+    <img src={plant} className="w-80 h-80 translate-x-24" />,
+    <img src={treeish} className="w-96 h-96 translate-x-36" />,
   ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -34,7 +34,7 @@ const Landing = () => {
   const nav = useNavigate();
   return (
     <div>
-      <div className="bg-[url('assets/bg.png')] w-screen h-screen bg-cover">
+      <div className="bg-[url('assets/bg.png')] w-screen h-screen bg-cover relative">
         <video
           ref={videoRef}
           autoPlay

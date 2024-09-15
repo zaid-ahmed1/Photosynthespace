@@ -20,7 +20,7 @@
 }
 
 .looper__innerList[data-animate="true"] .looper__listInstance {
-  animation: slideAnim linear infinite;   
+  animation: slideAnim linear infinite;
 }
 
 .looper__listInstance {
@@ -30,10 +30,9 @@
   animation: none;
 }
 
-
-:root {  
-  --green: #59C3C3;
-  --offwhite: #EBEBEB;
+:root {
+  --green: #59c3c3;
+  --offwhite: #ebebeb;
   --red: #e65a5e;
 }
 html {
@@ -50,26 +49,26 @@ body {
   justify-content: center;
   height: 120px;
   margin: 10px;
-  padding: 0px; 
+  padding: 0px;
   margin-bottom: 180px;
-  
+
   font-weight: 600;
   text-align: center;
   border-radius: 16px;
 }
-.contentBlock--one {  
+.contentBlock--one {
   width: 405px;
-  height:457.5px;
-  background: rgba(255, 255, 255, 0.05);    
+  height: 457.5px;
+  background: rgba(255, 255, 255, 0.05);
   font-weight: 600;
-  font-size: 18px; 
+  font-size: 18px;
 }
 .contentBlock--one:last-of-type {
   color: var(--green);
   margin-right: 36px;
 }
-.contentBlock--two {    
-  color: var(--green);  
+.contentBlock--two {
+  color: var(--green);
   font-size: 48px;
-  background: rgba(255, 255, 255, 0.05);  
+  background: rgba(255, 255, 255, 0.05);
 }
