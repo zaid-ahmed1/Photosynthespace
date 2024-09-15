@@ -1,8 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import greenBg from "@/assets/greenBg.mp4";
 import InfiniteLooper from "@/components/InfiniteLooper";
 import Button from "@/components/Button";
 import { useNavigate } from "react-router-dom";
+import plant from "@/assets/plant.webp";
+import sprout from "@/assets/sprout.webp";
+import treeish from "@/assets/treeish.webp";
 const Landing = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   useEffect(() => {
@@ -10,6 +13,23 @@ const Landing = () => {
       videoRef.current.playbackRate = 0.4;
     }
   });
+
+  const images = [
+    <img src={sprout} className="w-48 h-48" />,
+    <img src={plant} className="w-64 h-64 translate-x-8" />,
+    <img src={treeish} className="w-80 h-80 translate-x-12" />,
+  ];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000); // 5 seconds
+
+    return () => clearInterval(intervalId);
+  }, [images.length]);
 
   const nav = useNavigate();
   return (
@@ -25,17 +45,21 @@ const Landing = () => {
         >
           <source src={greenBg} type="video/mp4" />
         </video>
-        <div className="z-40 w-screen h-screen flex flex-col relative justify-center ml-30">
+        <div className="z-40 w-screen h-screen flex flex-col relative justify-center pl-30">
           <h1 className="text-white font-semibold text-5xl w-[50rem]">
             Meet Photosynthespace, the{" "}
-            <span className="bg-clip-text text-transparent bg-[linear-gradient(to_right,white,#00818A)] bg-[length:200%_auto] animate-gradient">
+            <span className="bg-clip-text text-transparent bg-[linear-gradient(to_right,white,#ECDF30,white)] bg-[length:200%_auto] animate-gradient">
               sunlight
             </span>{" "}
-            to your <span>goals</span>.
+            to your{" "}
+            <span className="bg-clip-text text-transparent bg-[linear-gradient(to_right,white,#29B57F,white)] bg-[length:200%_auto] animate-gradient">
+              goals
+            </span>
+            .
           </h1>
-          <p className="text-white font-medium text-3xl mt-4">
-            Plant the seeds of your goals. Stay on track and watch them blossom
-            with Mixed Reality.
+          <p className="text-white font-medium text-2xl mt-4">
+            Plant the seeds of your goals. <br /> Stay on track and watch them
+            blossom with Mixed Reality.
           </p>
 
           <Button
@@ -43,6 +67,9 @@ const Landing = () => {
             className="w-48 py-2.5 mt-16 rounded-15 flex justify-center items-center uppercase font-medium"
             size="base"
           />
+          <div className="flex justify-center items-center absolute right-40 z-50">
+            {images[currentImageIndex]}
+          </div>
         </div>
       </div>
     </div>

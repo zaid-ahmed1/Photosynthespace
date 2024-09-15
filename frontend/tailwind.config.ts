@@ -78,7 +78,7 @@ const config: Config = {
     },
     extend: {
       animation: {
-        gradient: "gradient 4s linear infinite",
+        gradient: "gradient 2s linear infinite",
         "scale-in": "scale-in 0.2s ease",
         "scale-out": "scale-out 0.2s ease",
         "fade-in": "fade-in 200ms ease",
