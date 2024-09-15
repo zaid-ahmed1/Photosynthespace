@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import greenBg from "@/assets/greenBg.mp4";
-import InfiniteLooper from "@/components/InfiniteLooper";
 import Button from "@/components/Button";
 import { useNavigate } from "react-router-dom";
 import plant from "@/assets/plant.webp";
 import sprout from "@/assets/sprout.webp";
 import treeish from "@/assets/treeish.webp";
+import InfiniteLooper from "@/components/InfiniteLooper";
+import Carousel from "@/components/Carousel";
 const Landing = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   useEffect(() => {
@@ -26,14 +27,13 @@ const Landing = () => {
       setCurrentImageIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // 5 seconds
+    }, 2000); // 5 seconds
 
     return () => clearInterval(intervalId);
   }, [images.length]);
 
-  const nav = useNavigate();
   return (
-    <div>
+    <>
       <div className="bg-[url('assets/bg.png')] w-screen h-screen bg-cover relative">
         <video
           ref={videoRef}
@@ -72,7 +72,11 @@ const Landing = () => {
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="pt-25 w-screen flex justify-content items-center px-4">
+        <Carousel />
+      </div>
+    </>
   );
 };
 

@@ -1,8 +1,10 @@
 import React from "react";
 import InfiniteLooper from "./InfiniteLooper";
 import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
+  const nav = useNavigate();
   return (
     <div className="flex flex-col fixed top-0 left-0 z-50 w-screen opacity-80">
       <InfiniteLooper
@@ -19,9 +21,9 @@ const NavBar = () => {
           Photosynthespace
         </h1>
         <div className="flex items-center justify-center gap-16 *:text-white *:font-display *:uppercase *:font-medium *:text-lg *:cursor-pointer">
-          <Button text="Home" />
-          <Button text="Plant" />
-          <Button text="Water" />
+          <Button text="Home" onClick={() => nav("/")} />
+          <Button text="Plant" onClick={() => nav("/plant")} />
+          <Button text="Water" onClick={() => nav("/water")} />
         </div>
       </div>
     </div>

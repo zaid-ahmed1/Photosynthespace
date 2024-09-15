@@ -12,3 +12,8 @@ export type FontSize =
   | "7xl"
   | "8xl"
   | "9xl";
+
+export type CardType = {
+  content: JSX.Element;
+  answer: string;
+};

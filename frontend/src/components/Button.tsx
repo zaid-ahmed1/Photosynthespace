@@ -6,8 +6,9 @@ type ButtonType = {
   text: string;
   className?: string;
   size?: FontSize;
+  onClick?: () => void;
 };
-const Button: FC<ButtonType> = ({ text, className, size }) => {
+const Button: FC<ButtonType> = ({ text, className, size, onClick }) => {
   return (
     <a
       href="#_"
@@ -15,6 +16,7 @@ const Button: FC<ButtonType> = ({ text, className, size }) => {
         "relative inline-flex items-center px-12 pl-13 py-2 overflow-hidden  font-medium text-white border-2 border-white rounded-full hover:text-black group hover:bg-black",
         className
       )}
+      onClick={onClick}
     >
       <span className="absolute left-0 block w-full h-0 transition-all bg-white opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
       <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">

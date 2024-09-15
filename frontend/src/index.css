@@ -26,6 +26,11 @@
   src: url("/fonts/HelveticaNowDisplay-Black.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Bhamious";
+  src: url("/fonts/Bhamious.ttf") format("truetype");
+}
+
 :root {
   --font-helvetica: "Helvetica Now Display";
 }
@@ -33,6 +38,8 @@
 html,
 body {
   @apply m-0 min-h-full min-w-full overflow-x-hidden  font-display [&_*]:font-display;
+
+  font-family: "Helvetica Now Display";
 }
 
 @layer utilities {
