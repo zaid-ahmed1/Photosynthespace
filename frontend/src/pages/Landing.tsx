@@ -1,11 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import greenBg from "@/assets/greenBg.mp4";
 import Button from "@/components/Button";
-import { useNavigate } from "react-router-dom";
 import plant from "@/assets/plant.webp";
 import sprout from "@/assets/sprout.webp";
 import treeish from "@/assets/treeish.webp";
-import InfiniteLooper from "@/components/InfiniteLooper";
 import Carousel from "@/components/Carousel";
 const Landing = () => {
   const videoRef = useRef<HTMLVideoElement>(null);

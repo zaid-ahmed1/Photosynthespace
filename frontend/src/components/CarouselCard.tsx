@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import { FC } from "react";
 import styled from "@emotion/styled";
 import { CardType } from "../types";
 

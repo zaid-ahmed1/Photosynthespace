@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import InfiniteLooper from "./InfiniteLooper";
 import greenBg from "@/assets/greenBg.mp4";
 const Footer = () => {

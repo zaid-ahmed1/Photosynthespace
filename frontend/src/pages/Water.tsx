@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
-import greenBg from "@/assets/greenBg.mp4";
+import { useEffect, useState } from "react";
 
 const Water = () => {
   const [isLoading, setIsLoading] = useState(0);

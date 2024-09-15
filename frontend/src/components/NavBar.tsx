@@ -1,4 +1,3 @@
-import React from "react";
 import InfiniteLooper from "./InfiniteLooper";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
