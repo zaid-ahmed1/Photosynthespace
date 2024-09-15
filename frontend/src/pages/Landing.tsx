@@ -27,16 +27,21 @@ const Landing = () => {
         </video>
         <div className="z-40 w-screen h-screen flex flex-col relative justify-center ml-30">
           <h1 className="text-white font-semibold text-5xl w-[50rem]">
-            Meet Photosynthespace, the <span>sunlight</span> to your{" "}
-            <span>goals</span>.
+            Meet Photosynthespace, the{" "}
+            <span className="bg-clip-text text-transparent bg-[linear-gradient(to_right,white,#00818A)] bg-[length:200%_auto] animate-gradient">
+              sunlight
+            </span>{" "}
+            to your <span>goals</span>.
           </h1>
           <p className="text-white font-medium text-3xl mt-4">
             Plant the seeds of your goals. Stay on track and watch them blossom
             with Mixed Reality.
           </p>
+
           <Button
             text="Start"
-            className="w-48 py-2.5 mt-16 rounded-15 flex justify-center items-center"
+            className="w-48 py-2.5 mt-16 rounded-15 flex justify-center items-center uppercase font-medium"
+            size="base"
           />
         </div>
       </div>

@@ -1,16 +1,18 @@
 import React, { FC } from "react";
 import { twMerge } from "tailwind-merge";
+import { FontSize } from "../types";
 
 type ButtonType = {
   text: string;
   className?: string;
+  size?: FontSize;
 };
-const Button: FC<ButtonType> = ({ text, className }) => {
+const Button: FC<ButtonType> = ({ text, className, size }) => {
   return (
     <a
       href="#_"
       className={twMerge(
-        "relative inline-flex items-center px-12 pl-13 py-1.5 overflow-hidden text-md font-medium text-white border-2 border-white rounded-full hover:text-black group hover:bg-black",
+        "relative inline-flex items-center px-12 pl-13 py-2 overflow-hidden  font-medium text-white border-2 border-white rounded-full hover:text-black group hover:bg-black",
         className
       )}
     >
@@ -31,7 +33,14 @@ const Button: FC<ButtonType> = ({ text, className }) => {
           ></path>
         </svg>
       </span>
-      <span className="relative">{text}</span>
+      <span
+        className={twMerge(
+          "uppercase relative text-sm",
+          size && `text-${size}`
+        )}
+      >
+        {text}
+      </span>
     </a>
   );
 };
