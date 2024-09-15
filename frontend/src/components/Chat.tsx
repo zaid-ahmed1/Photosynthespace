@@ -16,12 +16,6 @@ const Chat: React.FC = () => {
 
   const user_id = useRef<string>("stanleylin82@gmail.com");
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  useEffect(scrollToBottom, [messages]);
-
   const interact = async (user_id: string, request: any) => {
     try {
       const response = await axios.post(
@@ -62,6 +56,7 @@ const Chat: React.FC = () => {
       const botMessages = await interact("stanleylin82@gmail.com", {
         type: "launch",
       });
+      setMessages([]);
       setMessages((prev) => [...prev, ...(botMessages as Message[])]);
       setLoading(false);
     };
@@ -104,10 +99,10 @@ const Chat: React.FC = () => {
             }`}
           >
             <div
-              className={`rounded-lg p-2 max-w-xs ${
+              className={`rounded-8 p-3 px-6 font-display max-w-xs ${
                 message.sender === "user"
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-300 text-gray-800"
+                  ? "bg-[#A7E0CB] text-[#104241]"
+                  : "bg-[#104241] text-white"
               }`}
             >
               {message.text}
@@ -116,7 +111,7 @@ const Chat: React.FC = () => {
         ))}
         {loading && (
           <div className="mb-2 flex justify-start">
-            <div className="rounded-lg p-2 max-w-xs bg-gray-300 text-gray-800">
+            <div className="rounded-8 p-3 px-6 max-w-base bg-[#206B6A] text-white">
               Typing...
             </div>
           </div>
@@ -125,10 +120,10 @@ const Chat: React.FC = () => {
       </div>
 
       {/* Input */}
-      <div className="p-4 bg-white flex">
+      <div className="p-4 py-6 rounded-12 bg-white flex justify-center items-center gap-8">
         <input
           type="text"
-          className="flex-1 border border-gray-300 rounded-l-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="border border-gray-300 p-4 pl-8 focus:outline-none rounded-8 w-[800px] font-display focus:ring-[#206B6A]"
           placeholder="Type your message..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
@@ -136,7 +131,7 @@ const Chat: React.FC = () => {
         />
         <button
           onClick={sendMessage}
-          className="bg-blue-500 text-white p-2 rounded-r-lg hover:bg-blue-600"
+          className="bg-blue-500 rounded-8 w-32 text-white p-4 rounded-r-lg hover:bg-blue-600"
         >
           Send
         </button>
